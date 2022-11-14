@@ -11,7 +11,6 @@ import web.service.UserService;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -43,7 +42,7 @@ public class UserController {
         }
         userService.save(user);
 
-        return "redirect:/users";
+        return "redirect:/";
     }
 
     @PatchMapping("/update")
@@ -57,6 +56,6 @@ public class UserController {
     public String delete(@RequestParam("userId") int id) {
         userService.delete(id);
 
-        return "redirect:/users";
+        return "redirect:/";
     }
 }

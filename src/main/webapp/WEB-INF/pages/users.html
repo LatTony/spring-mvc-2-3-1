@@ -20,11 +20,11 @@
       <td th:utext="${user.getName()}"></td>
       <td th:utext="${user.getSurname()}"></td>
       <td>
-        <form th:method="PATCH" th:action="@{/users/update(userId=${user.getId()})}">
+        <form th:method="PATCH" th:action="@{/update(userId=${user.getId()})}">
           <input type="submit" value="Update"/>
         </form>
 
-        <form th:method="DELETE" th:action="@{/users/delete(userId=${user.getId()})}">
+        <form th:method="DELETE" th:action="@{/delete(userId=${user.getId()})}">
           <input type="submit" value="Delete"/>
         </form>
       </td>
@@ -34,7 +34,7 @@
   <br>
 
   <input type="button" value="Add"
-         onclick="window.location.href = '/users/new'"/>
+         onclick="window.location.href = '/new'"/>
 
 </div>
 </body>
